@@ -37,24 +37,25 @@
                    <div class="content-img ">
                    <img src="img/contentbanner.jpg" alt="alt"/>
                </div>
-               <form action="" method="POST" class="form" id="form-1">
+               <form action="LoginCustomer" method="POST" class="form" id="form-1">
       <h3 class="heading">LOGIN</h3>
       <div class="spacer"></div>
       <div class="form-group">
         <label for="fullname" class="form-label">Username</label>
-        <input id="fullname" name="fullname" type="text" placeholder="" class="form-control">
-        <span class="form-message"></span>
+        <input id="fullname" name="username" type="text" placeholder="" class="form-control">
+        <span class="form-message" style="color:red;">${tbTk}</span>
       </div>
       <div class="form-group">
         <label for="password" class="form-label">Password</label>
         <input id="password" name="password" type="password" placeholder="" class="form-control">
-        <span class="form-message"></span>
+        <span class="form-message" style="color:red;">${tbPass}</span>
       </div>
       <a>Forgot Your Password?<a href="url" target="target"></a>
       <button class="form-submit">Login</button>
+      <span class="form-message" style="color:red;">${tbsubmit}</span>
       <div class="form-signup">
           <p>Haven’t got an account?</p>
-          <button class="signup">Sign Up</button>
+          <button class="signup" name="submit" value="signup">Sign Up</button>
       </div>
     </form>
                </div>

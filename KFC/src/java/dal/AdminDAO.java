@@ -39,7 +39,7 @@ public class AdminDAO extends DBContext {
             Admin admin = new Admin();
 
             while (rs.next()) {
-                admin.setId(rs.getInt("adminID"));
+                admin.setId(rs.getInt("id"));
                 admin.setUsername(rs.getString("username"));
                 admin.setPassword(rs.getString("password"));
                

@@ -2,24 +2,27 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-package controller;
+package customer.controller;
 
-import dal.DishDAO;
+import dal.AdminDAO;
+import dal.CustomerDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import model.Admin;
+import model.Customer;
 
 /**
  *
  * @author Asus
  */
-public class deleteServlet extends HttpServlet {
+public class LoginCustomer extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,10 +41,10 @@ public class deleteServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet deleteServlet</title>");            
+            out.println("<title>Servlet LoginCustomer</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet deleteServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet LoginCustomer at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -56,10 +59,10 @@ public class deleteServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    @Override
+  @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        response.sendRedirect("login.jsp");
     }
 
     /**
@@ -73,30 +76,43 @@ public class deleteServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         try {
-        int dish_id = Integer.parseInt(request.getParameter("dish_id"));
-       
+        try {
+           
 
-       
+            
+            String userInput = request.getParameter("username");
+            String passInput = request.getParameter("password");
+  
+//           
+          
 
-        DishDAO dishDAO = new DishDAO();
-        dishDAO.delete(dish_id);
+            CustomerDAO customerDAO = new CustomerDAO();
+            AdminDAO adminDAO = new AdminDAO();
+           Admin admin = adminDAO.getAdmin(userInput, passInput);
+          Customer  customer = customerDAO.getCustomer(userInput, passInput);
 
-       
+            if (customer != null) {
+               
+                // neu la customer thi chuyen toi trang hone.jsp
+                request.getRequestDispatcher("home.jsp").forward(request, response);
+            } else if (admin!= null) {
+                // ko phai Customer!
+//               
+          
+                 response.sendRedirect("ListController");
+            } else {
+                 HttpSession session = request.getSession();
+                request.setAttribute("tbsubmit", "Tài khoản hoặc mật khẩu không đúng");
+                // return back login.jsp using Servlet (method GET)
+                request.getRequestDispatcher("login.jsp").forward(request, response);
+            }
+            
+            
 
-        response.sendRedirect("ListController");
-    } catch (NumberFormatException ex) {
-        // Xử lý lỗi số học (không thể chuyển đổi thành số).
-        response.sendRedirect("error.jsp");
-    } catch (SQLException ex) {
-        // Xử lý lỗi truy vấn cơ sở dữ liệu.
-        response.sendRedirect("error.jsp");
-        Logger.getLogger(updateServlet.class.getName()).log(Level.SEVERE, null, ex);
-    } catch (Exception ex) {
-        // Xử lý lỗi khác (nếu có).
-        response.sendRedirect("error.jsp");
-        Logger.getLogger(updateServlet.class.getName()).log(Level.SEVERE, null, ex);
-    }
+        } catch (Exception ex) {
+            response.sendRedirect("error.jsp");
+            Logger.getLogger(LoginCustomer.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -108,5 +124,4 @@ public class deleteServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
 }

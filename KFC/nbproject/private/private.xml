@@ -3,14 +3,27 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Asus/OneDrive/Documents/KFC/KFC/web/updateProduct.jsp</file>
-            <file>file:/C:/Users/Asus/OneDrive/Documents/KFC/KFC/src/java/controller/updateServlet.java</file>
-            <file>file:/C:/Users/Asus/OneDrive/Documents/KFC/KFC/src/java/controller/addServlet.java</file>
-            <file>file:/C:/Users/Asus/OneDrive/Documents/KFC/KFC/src/java/dal/CustomerDAO.java</file>
-            <file>file:/C:/Users/Asus/OneDrive/Documents/KFC/KFC/src/java/dal/AdminDAO.java</file>
-            <file>file:/C:/Users/Asus/OneDrive/Documents/KFC/KFC/src/java/dal/DishDAO.java</file>
-            <file>file:/C:/Users/Asus/OneDrive/Documents/KFC/KFC/web/error.jsp</file>
-            <file>file:/C:/Users/Asus/OneDrive/Documents/KFC/KFC/web/addProduct.jsp</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/web/list.jsp</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/src/java/dal/AdminDAO.java</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/src/java/customer/controller/ListCustomerServlet.java</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/src/java/RegisterServlet.java</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/src/java/controller/addServlet.java</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/web/demo1.jsp</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/src/java/dal/DishDAO.java</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/web/demo.jsp</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/src/java/controller/updateServlet.java</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/web/login.jsp</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/src/java/customer/controller/LoginDemo.java</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/src/java/model/Customer.java</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/web/home.jsp</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/web/menu.jsp</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/web/addProduct.jsp</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/web/css/styleadmin.css</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/web/listCustomer.jsp</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/src/java/controller/ListController.java</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/src/java/dal/CustomerDAO.java</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/web/register.jsp</file>
+            <file>file:/D:/FPT%20Nam%203/KFC/KFC/web/css/stylelogin.css</file>
         </group>
     </open-files>
 </project-private>

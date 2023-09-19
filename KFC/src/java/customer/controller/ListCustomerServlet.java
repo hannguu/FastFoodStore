@@ -4,12 +4,18 @@
  */
 package customer.controller;
 
+
+import dal.CustomerDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Customer;
 
 /**
  *
@@ -55,7 +61,15 @@ public class ListCustomerServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+           CustomerDAO customerDao = new CustomerDAO();
+            ArrayList<Customer> list = customerDao.getAllCustomer(); 
+            request.setAttribute("listc", list); // request scope
+            request.getRequestDispatcher("listCustomer.jsp").forward(request, response);
+        } catch (Exception ex) {
+            response.sendRedirect("success.jsp");
+            Logger.getLogger(ListCustomerServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**

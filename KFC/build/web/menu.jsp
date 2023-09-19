@@ -12,9 +12,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <a href="ListController">List Product</a> 
+        <a href="ListProductServlet">List Product</a> 
         <a href="addServlet">Add Product</a>
-        <a
+       
+        
         <hr>
     </body>
 </html>

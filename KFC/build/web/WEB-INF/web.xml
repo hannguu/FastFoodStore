@@ -2,7 +2,7 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>RegisterServlet</servlet-class>
+        <servlet-class>guest.controller.RegisterServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>VerifyServlet</servlet-name>
@@ -10,11 +10,11 @@
     </servlet>
     <servlet>
         <servlet-name>GuestServlet</servlet-name>
-        <servlet-class>controller.GuestServlet</servlet-class>
+        <servlet-class>admin.controller.GuestServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>addServlet</servlet-name>
-        <servlet-class>controller.addServlet</servlet-class>
+        <servlet-class>admin.controller.addServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>listServlet</servlet-name>
@@ -26,15 +26,15 @@
     </servlet>
     <servlet>
         <servlet-name>ListController</servlet-name>
-        <servlet-class>controller.ListController</servlet-class>
+        <servlet-class>admin.controller.ListController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>updateServlet</servlet-name>
-        <servlet-class>controller.updateServlet</servlet-class>
+        <servlet-class>admin.controller.updateServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>deleteServlet</servlet-name>
-        <servlet-class>controller.deleteServlet</servlet-class>
+        <servlet-class>admin.controller.deleteServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>addCustomer</servlet-name>
@@ -51,6 +51,22 @@
     <servlet>
         <servlet-name>NewServlet</servlet-name>
         <servlet-class>controller.NewServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>customer.controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginDemo</servlet-name>
+        <servlet-class>customer.controller.LoginDemo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginCustomer</servlet-name>
+        <servlet-class>customer.controller.LoginCustomer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListProductServlet</servlet-name>
+        <servlet-class>admin.controller.ListProductServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
@@ -103,6 +119,22 @@
     <servlet-mapping>
         <servlet-name>NewServlet</servlet-name>
         <url-pattern>/NewServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginDemo</servlet-name>
+        <url-pattern>/LoginDemo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginCustomer</servlet-name>
+        <url-pattern>/LoginCustomer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListProductServlet</servlet-name>
+        <url-pattern>/ListProductServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

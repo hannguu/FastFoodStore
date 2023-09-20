@@ -15,6 +15,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="css/styleadmin.css"/>
         <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/goong-js/dist/goong-js.css"></script>
+<script src="https://unpkg.com/goong-js/dist/goong-js.js"></script>
+
     </head>
     <body>
         <h1>Danh sách món ăn</h1>

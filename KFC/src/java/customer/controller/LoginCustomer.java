@@ -99,7 +99,7 @@ public class LoginCustomer extends HttpServlet {
                 // ko phai Customer!
 //               
           
-                 response.sendRedirect("ListController");
+                 response.sendRedirect("ListProductServlet");
             } else {
                  HttpSession session = request.getSession();
                 request.setAttribute("tbsubmit", "Tài khoản hoặc mật khẩu không đúng");
